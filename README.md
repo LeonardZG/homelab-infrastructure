@@ -32,6 +32,15 @@ Personal homelab infrastructure for learning and experimenting with Linux system
 
 ---
 
+## Documentation
+
+Detailed documentation of the current infrastructure:
+
+- [Network Overview](docs/network-overview.md)
+- [Roles and Servers](docs/roles-and-servers.md)
+
+---
+
 ## Planned Infrastructure Extensions
 
 The following components will be added to simulate a more realistic service infrastructure:
