@@ -23,8 +23,6 @@ Backend
 Python HTTP Server
 python3 -m http.server 9000
 
----
-
 ### Portal
 
 Hostname  
@@ -40,8 +38,6 @@ Backend
 Python HTTP Server
 python3 -m http.server 900
 
----
-
 ## Nginx Struktur
 
 Debian verwendet folgende Struktur für virtuelle Hosts:
@@ -55,8 +51,6 @@ Debian verwendet folgende Struktur für virtuelle Hosts:
 └─ portal.homelab.local
 
 Sites werden in `sites-available` definiert und über Symlinks in `sites-enabled` aktiviert.
-
----
 
 ## Konfigurationsänderungen
 
