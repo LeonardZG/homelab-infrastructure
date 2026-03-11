@@ -11,6 +11,7 @@ inklusive ihrer Aufgaben und Verantwortlichkeiten.
 | Name | Betriebssystem | IP-Adresse | Rolle |
 |-----|----------------|------------|-------|
 | DC01 | Debian 12 | 192.168.56.7 | Samba Active Directory Domain Controller + DNS |
+| APP01 | Debian 12 | 192.168.56.10 | Reverse Proxy / Web Gateway |
 
 ---
 
@@ -27,6 +28,28 @@ inklusive ihrer Aufgaben und Verantwortlichkeiten.
 - Statische IP-Adresse
 - Nutzt ausschließlich internen DNS
 - Kein Routing, kein Gateway, keine Firewall-Funktion
+
+---
+
+## APP01 – Reverse Proxy / Web Gateway
+
+Aufgaben:
+
+- zentraler Zugriffspunkt für interne Webservices
+- Weiterleitung von HTTP/HTTPS an Backend-Server
+- Verwaltung von virtuellen Hosts
+- Grundlage für zukünftige TLS-Termination
+
+Typische Services hinter dem Proxy:
+
+- gitea.homelab.local
+- wiki.homelab.local
+- grafana.homelab.local
+- uptime.homelab.local
+
+Software:
+
+- Nginx
 
 ---
 
