@@ -44,7 +44,7 @@ Core components:
 
 ## Documentation
 
-Detailed technical documentation of the infrastructure:
+Detailed technical documentation of the infrastructure.
 
 ### Domain Controller (DC01)
 
@@ -55,6 +55,14 @@ Detailed technical documentation of the infrastructure:
 ### Client Integration
 
 - [Windows Client Domain Join](docs/windows_client_join.md)
+
+### Identity & Access Management
+
+- [Users and Groups](docs/benutzer_und_gruppen.md)
+
+### Troubleshooting
+
+- [Samba AD Troubleshooting](docs/troubleshooting.md)
 
 ### Infrastructure
 
