@@ -47,6 +47,9 @@ Detailed documentation of the current infrastructure:
 
 - [Network Overview](docs/network-overview.md)
 - [Roles and Servers](docs/roles-and-servers.md)
+- [DC01 Base System](docs/dc01_basis.md)
+- [DC01 Network Configuration](docs/dc01_netzwerk.md)
+- [DC01 Samba Active Directory](docs/dc01_samba_ad.md)
 
 ---
 
