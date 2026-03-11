@@ -5,6 +5,15 @@ Personal homelab infrastructure for learning and experimenting with Linux system
 
 ## Current Infrastructure
 
+The homelab currently contains a minimal Active Directory environment.
+
+Components:
+
+- Debian 12 server running Samba Active Directory
+- Integrated DNS and Kerberos
+- Windows client joined to the domain
+- Internal network: 192.168.56.0/24 (VirtualBox host-only)
+
 ### Virtualization
 
 - Virtualized lab environment
