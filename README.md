@@ -5,36 +5,37 @@ Personal homelab infrastructure for learning and experimenting with Linux system
 
 ## Current Infrastructure
 
-The homelab currently contains a minimal Active Directory environment.
+The homelab currently contains a minimal Active Directory environment built with Samba on Debian.
 
-Components:
+Core components:
 
-- Debian 12 server running Samba Active Directory
-- Integrated DNS and Kerberos
+- Debian 12 server running **Samba Active Directory**
+- Integrated **DNS** and **Kerberos**
 - Windows client joined to the domain
-- Internal network: 192.168.56.0/24 (VirtualBox host-only)
+- Internal lab network `192.168.56.0/24` (VirtualBox host-only)
+
+---
+
+## Infrastructure Components
 
 ### Virtualization
-
-- Virtualized lab environment
-- Multiple Linux servers
+- VirtualBox based lab environment
+- Linux server infrastructure
 - Windows client system
 
 ### Identity Management
-
 - Samba Active Directory Domain Controller
-- DNS and Kerberos integration
-- Organizational Units and user management
-- Windows client joined to the domain
+- Domain: `homelab.local`
+- Kerberos authentication
+- LDAP directory services
 
 ### Networking
-
 - Segmented lab network
-- Host-only and NAT networking
-- Domain-based name resolution
+- Host-only internal network
+- NAT interface for external access
+- Domain-based DNS resolution
 
 ### Administration
-
 - Linux CLI administration
 - Windows RSAT tools
 - Domain user and group management
@@ -43,13 +44,22 @@ Components:
 
 ## Documentation
 
-Detailed documentation of the current infrastructure:
+Detailed technical documentation of the infrastructure:
 
-- [Network Overview](docs/network-overview.md)
-- [Roles and Servers](docs/roles-and-servers.md)
+### Domain Controller (DC01)
+
 - [DC01 Base System](docs/dc01_basis.md)
 - [DC01 Network Configuration](docs/dc01_netzwerk.md)
 - [DC01 Samba Active Directory](docs/dc01_samba_ad.md)
+
+### Client Integration
+
+- [Windows Client Domain Join](docs/windows_client_join.md)
+
+### Infrastructure
+
+- [Network Overview](docs/network-overview.md)
+- [Roles and Servers](docs/roles-and-servers.md)
 
 ---
 
