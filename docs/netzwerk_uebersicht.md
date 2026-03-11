@@ -49,6 +49,7 @@ Externe DNS-Anfragen werden bei Bedarf weitergeleitet (DNS-Forwarder).
 | System | IP-Adresse | Typ |
 |------|-----------|-----|
 | DC01 | 192.168.56.7 | statisch |
+| APP01 | 192.168.56.10 | statisch |
 | Clients | dynamisch oder statisch | DHCP / manuell |
 
 Statische IPs werden für Server verwendet, um stabile Dienste zu gewährleisten.
