@@ -1,4 +1,3 @@
-````md
 # Troubleshooting – Samba Active Directory
 
 ## Ziel
@@ -11,9 +10,8 @@ Diese Datei dient als Nachschlagewerk und Lernhilfe.
 ## DNS-Probleme (häufigste Fehlerquelle)
 
 ### Problem
-```text
+
 kinit: KDC für Realm nicht gefunden
-````
 
 ### Ursache
 
