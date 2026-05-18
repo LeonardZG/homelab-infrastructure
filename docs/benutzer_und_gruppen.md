@@ -1,4 +1,3 @@
-```md
 # Benutzer und Gruppen – Active Directory
 
 ## Ziel
@@ -22,8 +21,6 @@ Im Active Directory werden:
 
 Empfohlene OU-Struktur:
 
-```
-
 HOMELAB.LOCAL
 │
 ├── OU=Users
@@ -31,7 +28,6 @@ HOMELAB.LOCAL
 ├── OU=Computers
 └── OU=Servers
 
-```
 
 **Vorteile:**
 - Übersichtliche Struktur
@@ -81,11 +77,8 @@ HOMELAB.LOCAL
 ## Rechtekonzept (Best Practice)
 
 **Prinzip:**
-```
 
 Benutzer → Gruppe → Ressource
-
-````
 
 Beispiel:
 - Benutzer `max.mustermann`
@@ -107,11 +100,10 @@ Beispiel:
 - RSAT (Remote Server Administration Tools) auf Windows-Client
 
 **Beispiel (CLI):**
-```bash
+
 samba-tool user create max.mustermann
 samba-tool group add GRP_FS_READ
 samba-tool group addmembers GRP_FS_READ max.mustermann
-````
 
 ---
 
