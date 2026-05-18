@@ -20,10 +20,8 @@ kinit: KDC für Realm nicht gefunden
 
 ### Lösung
 
-```bash
 nameserver 127.0.0.1
 search homelab.local
-```
 
 ---
 
@@ -31,9 +29,7 @@ search homelab.local
 
 ### Problem
 
-```text
 samba-ad-dc.service: Condition failed
-```
 
 ### Ursache
 
@@ -43,16 +39,12 @@ samba-ad-dc.service: Condition failed
 
 ### Lösung
 
-```bash
 systemctl stop smbd nmbd winbind
 systemctl disable smbd nmbd winbind
-```
 
 Provisioning ggf. erneut ausführen:
 
-```bash
 samba-tool domain provision ...
-```
 
 ---
 
@@ -60,9 +52,7 @@ samba-tool domain provision ...
 
 ### Problem
 
-```text
 kinit: Passwort falsch
-```
 
 ### Ursache
 
@@ -71,15 +61,11 @@ kinit: Passwort falsch
 
 ### Lösung
 
-```bash
 samba-tool user setpassword administrator
-```
 
 Danach:
 
-```bash
 kinit administrator@HOMELAB.LOCAL
-```
 
 ---
 
@@ -101,10 +87,8 @@ kinit administrator@HOMELAB.LOCAL
 * Statische IP setzen
 * FQDN prüfen:
 
-```bash
 hostname -f
 getent hosts dc01.homelab.local
-```
 
 ---
 
@@ -120,9 +104,7 @@ Nach Neustart steht wieder externer DNS in `/etc/resolv.conf`
 
 ### Lösung
 
-```bash
 chattr +i /etc/resolv.conf
-```
 
 ---
 
@@ -130,9 +112,7 @@ chattr +i /etc/resolv.conf
 
 ### Meldung
 
-```text
 ERROR: Record already exists
-```
 
 ### Erklärung
 
