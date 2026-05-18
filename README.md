@@ -97,19 +97,6 @@ Die Umgebung wird schrittweise zu einer realistischeren Service-Infrastruktur au
 
 (Architekturdiagramm wird ergänzt)
 
-### Beispielstruktur
-
-Internet  
-│  
-Reverse Proxy  
-│  
-Service Layer  
-├ Application Services  
-├ Monitoring  
-├ Database  
-└ Logging  
-
-
 ---
 
 ## Services
