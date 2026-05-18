@@ -1,95 +1,103 @@
 # homelab-infrastructure
-Personal homelab infrastructure for learning and experimenting with Linux system administration, networking, monitoring and service deployment. Includes Active Directory, DNS, reverse proxy, monitoring stack and other infrastructure services.
+
+Private Homelab-Infrastruktur zum Lernen und Experimentieren im Bereich Linux-Systemadministration, Netzwerktechnik, Monitoring sowie Service-Deployment.  
+Die Umgebung bildet typische IT-Infrastruktur in kleinem Maßstab nach und umfasst Active Directory, DNS, Reverse Proxy, Monitoring sowie weitere zentrale Dienste.
 
 ---
 
-## Current Infrastructure
+## Aktuelle Infrastruktur
 
-The homelab currently contains a minimal Active Directory environment built with Samba on Debian.
+Die aktuelle Umgebung besteht aus einer grundlegenden Active-Directory-Infrastruktur auf Basis von Samba auf Debian.
 
-Core components:
+### Kernkomponenten
 
-- Debian 12 server running **Samba Active Directory**
-- Integrated **DNS** and **Kerberos**
-- Windows client joined to the domain
-- Internal lab network `192.168.56.0/24` (VirtualBox host-only)
-
----
-
-## Infrastructure Components
-
-### Virtualization
-- VirtualBox based lab environment
-- Linux server infrastructure
-- Windows client system
-
-### Identity Management
-- Samba Active Directory Domain Controller
-- Domain: `homelab.local`
-- Kerberos authentication
-- LDAP directory services
-
-### Networking
-- Segmented lab network
-- Host-only internal network
-- NAT interface for external access
-- Domain-based DNS resolution
-
-### Administration
-- Linux CLI administration
-- Windows RSAT tools
-- Domain user and group management
+- Debian 12 Server mit Samba Active Directory Domain Controller  
+- Integrierter DNS- und Kerberos-Dienst  
+- Windows-Client, der der Domäne beigetreten ist  
+- Internes Labornetzwerk (192.168.56.0/24, VirtualBox Host-Only)
 
 ---
 
-## Documentation
+## Infrastruktur-Komponenten
 
-Detailed technical documentation of the infrastructure.
+### Virtualisierung
 
-### Domain Controller (DC01)
+- VirtualBox-basierte Laborumgebung  
+- Linux-Server-Infrastruktur  
+- Windows-Client-Systeme  
 
-- [DC01 Base System](docs/dc01_basis.md)
-- [DC01 Network Configuration](docs/dc01_netzwerk.md)
-- [DC01 Samba Active Directory](docs/dc01_samba_ad.md)
-
-### Client Integration
-
-- [Windows Client Domain Join](docs/windows_client_join.md)
+---
 
 ### Identity & Access Management
 
-- [Users and Groups](docs/benutzer_und_gruppen.md)
-
-### Troubleshooting
-
-- [Samba AD Troubleshooting](docs/troubleshooting.md)
-
-### Infrastructure
-
-- [Network Overview](docs/network-overview.md)
-- [Roles and Servers](docs/roles-and-servers.md)
+- Samba Active Directory Domain Controller  
+- Domain: homelab.local  
+- Kerberos-basierte Authentifizierung  
+- LDAP-Verzeichnisdienste  
+- Benutzer- und Gruppenverwaltung  
 
 ---
 
-## Planned Infrastructure Extensions
+### Netzwerk
 
-The following components will be added to simulate a more realistic service infrastructure:
-
-- Reverse Proxy / Web Gateway
-- Monitoring Stack (Prometheus + Grafana)
-- Centralized Logging
-- Database Server
-- Automated Backups
-- Service Deployment
-- Alerting / Notifications
+- Segmentiertes Labornetzwerk  
+- Host-Only internes Netzwerk  
+- NAT-Schnittstelle für externen Zugriff  
+- DNS-Auflösung über Domain-Infrastruktur  
 
 ---
 
-## Architecture Overview
+### Administration
 
-(Architecture diagram will be added)
+- Linux-Systemadministration über CLI  
+- Verwaltung über Windows RSAT-Tools  
+- Domain-User- und Gruppenverwaltung  
 
-Example structure:
+---
+
+## Domain Controller (DC01)
+
+- Grundsystem und Netzwerkkonfiguration  
+- Samba Active Directory Konfiguration  
+- DNS- und Kerberos-Integration  
+- Windows-Client-Domain-Join  
+
+---
+
+## Client Integration
+
+- Windows Client im Active Directory eingebunden  
+- Testumgebung für Benutzer- und Rechteverwaltung  
+
+---
+
+## Troubleshooting & Betrieb
+
+- Analyse und Behebung von Samba-AD-Problemen  
+- Netzwerkdiagnose  
+- Active Directory Debugging und Fehleranalyse  
+
+---
+
+## Infrastruktur-Erweiterungen (geplant / in Arbeit)
+
+Die Umgebung wird schrittweise zu einer realistischeren Service-Infrastruktur ausgebaut:
+
+- Reverse Proxy / Web Gateway (bereits integriert)  
+- Monitoring Stack (Prometheus + Grafana)  
+- Zentrales Logging  
+- Datenbankserver  
+- Automatisierte Backup-Lösung  
+- Service-Deployment-Mechanismen  
+- Alerting & Benachrichtigungssysteme  
+
+---
+
+## Architekturübersicht
+
+(Architekturdiagramm wird ergänzt)
+
+### Beispielstruktur
 
 Internet  
 │  
@@ -101,72 +109,78 @@ Service Layer
 ├ Database  
 └ Logging  
 
+
 ---
 
-## Services (Planned)
+## Services
 
-### Reverse Proxy
+### Reverse Proxy / Web Gateway
 
-Central entry point for internal services.
+Zentraler Einstiegspunkt für interne und externe Services.
 
-Possible technologies:
-
+**Mögliche Technologien:**
 - NGINX
 - Traefik
 
+---
+
 ### Monitoring
 
-Infrastructure monitoring and metrics collection.
+Überwachung von Infrastruktur und Systemmetriken.
 
-Tools:
-
+**Tools:**
 - Prometheus
 - Grafana
 
+---
+
 ### Logging
 
-Centralized log aggregation for services and servers.
+Zentrale Log-Aggregation für Systeme und Services.
 
-Possible stack:
-
+**Stacks:**
 - Loki
-- ELK
+- ELK Stack
 
-### Database
+---
 
-Database services for internal applications.
+### Datenbank
 
-Possible technologies:
+Bereitstellung von Datenbankdiensten für interne Anwendungen.
 
+**Technologien:**
 - PostgreSQL
 - MariaDB
 
-### Backup System
+---
 
-Automated backup strategy for:
+### Backup-System
 
-- system configuration
-- databases
-- service data
+Automatisierte Backup-Strategie für:
+
+- Systemkonfigurationen  
+- Datenbanken  
+- Servicedaten  
 
 ---
 
-## Goals of this Homelab
+## Ziele der Homelab-Infrastruktur
 
-This homelab is used to practice and demonstrate skills in:
+Diese Homelab-Umgebung dient der praxisnahen Entwicklung von Fähigkeiten in:
 
-- Linux system administration
-- network services
-- infrastructure design
-- monitoring and observability
-- service deployment
-- troubleshooting and operations
+- Linux-Systemadministration  
+- Netzwerkadministration  
+- Infrastrukturdesign  
+- Monitoring und Observability  
+- Service-Betrieb und Deployment  
+- Fehleranalyse und Troubleshooting  
 
 ---
 
-## Future Improvements
+## Zukünftige Verbesserungen
 
-- Infrastructure automation
-- containerized services
-- CI/CD pipelines
-- infrastructure as code
+- Infrastructure as Code (Ansible / Terraform)  
+- Containerisierte Services (Docker / Kubernetes)  
+- CI/CD-Pipelines  
+- Automatisierung von Deployments  
+- Erweiterung der Service-Landschaft  
