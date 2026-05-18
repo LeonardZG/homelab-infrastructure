@@ -1,6 +1,4 @@
 ---
-
-````md
 # DC01 – Samba Active Directory
 
 ## Ziel
