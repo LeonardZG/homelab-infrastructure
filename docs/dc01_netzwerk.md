@@ -30,8 +30,7 @@ Der Domain Controller fungiert nicht als Router oder Gateway.
 ## Statische IP (Host-only)
 
 Konfiguration in `/etc/network/interfaces`:
-
-```ini
+ini
 allow-hotplug enp0s9
 iface enp0s9 inet static
   address 192.168.56.7/24
