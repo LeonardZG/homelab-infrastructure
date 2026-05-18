@@ -74,7 +74,7 @@ Beenden: **CTRL + X**
 ---
 
 ## 3️⃣ Kurzcheck
-```bash
+
 cat dc01_netzwerk.md
 
 
